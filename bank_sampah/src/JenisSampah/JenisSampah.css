@@ -1,0 +1,570 @@
+table,
+th,
+tr,
+td {
+  border: 1px solid #ddd;
+}
+
+h2 {
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.884);
+  margin-bottom: 20px;
+}
+
+table {
+  width: 1180px;
+  height: 200px;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  min-width: 800px; /* Atur lebar minimum tabel agar tidak terpotong */
+}
+
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  padding-right: 0;
+}
+
+table th {
+  background-color: #f2f2f2;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-signup {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  margin-top: 50px;
+  max-height: 550px;
+  max-width: 600px;
+  border: 1px white solid;
+  margin-left: 350px;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.signup-title {
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.884);
+  margin-bottom: 20px;
+  text-align: center;
+}
+.table-container {
+  height: calc(
+    100vh - 100px
+  ); /* Mengatur tinggi tabel agar selalu 100% dari tinggi layar, dikurangi tinggi elemen lain di atasnya */
+  overflow-y: auto; /* Memunculkan scroll jika konten melebihi tinggi layar */
+}
+input,
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.create {
+  margin: 20px;
+  padding: 10px 20px;
+  border: black solid;
+  border-radius: 10px;
+  display: inline-block;
+  background-color: #007bff;
+  cursor: pointer;
+}
+.create:hover {
+  background-color: #0056b3;
+}
+.action-buttons {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto 0;
+  text-align: center;
+  gap: 10px;
+  border: none;
+}
+.empty-cell {
+  font-size: 1.5rem;
+  /* Sesuaikan dengan ukuran yang Anda inginkan */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.header h2 {
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.884);
+  margin-left: 25px;
+}
+
+/* Text styles */
+.text {
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-top: 3px;
+  margin-right: 5px;
+  line-height: 30px;
+  margin-top: 10px;
+  margin-bottom: -10px;
+  border: 1px black solid;
+  border-radius: 4px;
+  color: rgba(0, 0, 0, 0.641);
+  display: block; /* Mengubah display menjadi inline-block */
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.812);
+  /* Menyesuaikan lebar dengan parent */
+}
+.delete {
+  background-color: red;
+  margin-right: 5px;
+  width: 60px;
+  height: 30px;
+  padding: 5px;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+.delete:hover {
+  background-color: rgba(146, 13, 13, 0.721);
+}
+.update {
+  background-color: orange;
+  width: 70px;
+  height: 30px;
+  padding: 5px;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+.update:hover {
+  background-color: orangered;
+}
+.back {
+  background-color: rgba(89, 86, 86, 0.626);
+  width: 60px;
+  height: 20px;
+  padding: 5px;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+.back:hover {
+  background-color: rgba(48, 46, 46, 0.504);
+}
+.back-read {
+  background-color: rgba(12, 77, 169, 0.981);
+  width: 70px;
+  height: 20px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  margin-right: 10px;
+  margin-left: 20px;
+}
+.back-read:hover {
+  background-color: rgba(13, 73, 156, 0.821);
+}
+.edit {
+  background-color: #34a853;
+  width: 50px;
+  height: 20px;
+  padding: 5px;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+.edit:hover {
+  background-color: #248a3fc7;
+}
+.edit-read {
+  background-color: #34a853;
+  width: 70px;
+  height: 20px;
+  padding: 5px;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+.edit-read:hover {
+  background-color: #248a3fc7;
+}
+.read {
+  background-color: #007bff;
+  width: 50px;
+  height: 20px;
+  padding: 5px;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+.read:hover {
+  background-color: #0056b3;
+}
+.read-laporan {
+  background-color: #007bff;
+  width: 50px;
+  height: 20px;
+  padding: 5px;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+.read-laporan:hover {
+  background-color: #0056b3;
+}
+
+.container-read {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  margin-top: 20px;
+  max-height: 600px;
+  max-width: 500px;
+  border: 1px white solid;
+  margin-left: 350px;
+  border-radius: 20px;
+  padding: 10px;
+}
+.container-login {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  margin-top: 100px;
+  max-height: 450px;
+  max-width: 500px;
+  border: 1px white solid;
+  margin-left: 350px;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.read-judul {
+  text-align: center;
+}
+.container-read p {
+  margin-bottom: 20px;
+  margin-left: 20px;
+  font-weight: bold;
+}
+.judul {
+  margin-left: 10px;
+}
+.label {
+  margin-bottom: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.option {
+  margin: auto;
+  display: block;
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+}
+
+.pagination {
+  flex: 1;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 10px;
+}
+
+.pagination button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pagination button:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.pagination button[disabled] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.pagination button.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.signup {
+  text-align: center; /* Mengatur teks agar berada di tengah */
+  margin-top: 20px; /* Jarak antara formulir dan tautan pendaftaran */
+}
+
+.signup p {
+  margin-bottom: 10px; /* Jarak antara teks dan tautan pendaftaran */
+}
+
+.signupback {
+  margin-left: 15px;
+  color: #007bff; /* Warna tautan pendaftaran */
+  text-decoration: none; /* Menghapus garis bawah pada tautan */
+}
+.login-signup {
+  margin-left: 5px;
+  color: #007bff; /* Warna tautan pendaftaran */
+  text-decoration: none;
+}
+.signup a:hover {
+  color: white;
+  text-decoration: underline; /* Efek bawah pada tautan saat dihover */
+}
+
+/* popup */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.popup-buttons button {
+  margin: 0 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.popup-buttons button:first-child {
+  background-color: #ff3333;
+  color: #fff;
+  border: none;
+}
+
+.popup-buttons button:last-child {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+}
+.popup-buttonss {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.popup-buttonss button {
+  margin: 0 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.popup-buttonss button:first-child {
+  background-color: orange;
+  color: #fff;
+  border: none;
+}
+
+.popup-buttonss button:last-child {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+}
+.desktop-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.mobile-buttons {
+  display: none;
+}
+
+.dropdown-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #ddd;
+}
+
+.dropdown-menu {
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+/* styles.css atau file CSS yang sesuai */
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+/* Filter Tanggal */
+.filter {
+  display: flex;
+  align-items: center;
+}
+
+.filter label {
+  margin-right: 10px;
+}
+
+.filter input[type="date"] {
+  width: 120px;
+}
+
+.filter button {
+  padding: 8px 16px;
+  background-color: #2962ff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.filter button:hover {
+  background-color: #0039cb;
+}
+@media screen and (max-width: 600px) {
+  .desktop-buttons {
+    display: none;
+  }
+  .mobile-buttons {
+    display: block;
+  }
+  .table-container {
+    overflow-x: auto;
+  }
+  table {
+    width: 100%; /* Pastikan tabel menggunakan 100% lebar dari container */
+    min-width: unset;
+  }
+  .container-read {
+    margin: auto;
+    width: 100%; /* Atur lebar container sesuai dengan lebar perangkat */
+  }
+  .header h2 {
+    font-size: 20px;
+  }
+  .create {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+  table th,
+  table td {
+    padding: 6px;
+  }
+  .action-buttons {
+    margin-bottom: 10px;
+  }
+  .action-buttons button {
+    margin: 5px 0;
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+  .container-login {
+    margin: auto;
+    height: 400px;
+    width: 100%;
+  }
+  .container-signup {
+    margin: auto;
+    width: 100%;
+  }
+  .read-laporan {
+    margin-right: 10px;
+    margin-top: 4px;
+  }
+  .back {
+    padding: 4px;
+  }
+  .back,
+  .update {
+    width: 100%;
+    text-align: center;
+  }
+  .signup-title {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container-read {
+    margin: auto;
+    width: 100%;
+  }
+  .container {
+    padding: 10px;
+  }
+  .container-login {
+    margin: auto;
+    height: 400px;
+    width: 100%;
+  }
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+  .header h2 {
+    margin-bottom: 10px;
+  }
+  .read-laporan {
+    margin-right: 10px;
+    margin-top: 4px;
+  }
+  .create {
+    margin: 10px;
+    margin-left: 25px;
+  }
+  .table-container {
+    overflow-x: auto;
+  }
+  table {
+    width: 100%;
+    min-width: unset;
+  }
+}
